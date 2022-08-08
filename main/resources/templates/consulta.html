@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href= "cadastroStyle.css"/>
+</head>
+<body class="a">
+<h1> Consultar Livros</h1>
+<table>
+<thead>
+	<tr>
+		<th>Id</th>
+		<th>Título</th>
+		<th>Autor</th>
+		<th>Ano de Publicação</th>
+		<th>Editora</th>
+		<th>Volume</th>
+	</tr>
+</thead>
+ <tbody>
+<tr th:each="livro: ${livros}">
+<td th:text="*{livro.id}"/> 
+<td th:text="*{livro.titulo}"/> 
+<td th:text="*{livro.autor}"/> 
+<td th:text="*{livro.anoPublicacao}"/> 
+<td th:text="*{livro.editora}"/> 
+<td th:text="*{livro.volume}"/> 
+<td> <a th:href= "@{'/consulta/' +${livro.id}}"> editar </a>
+<a th:href= "@{'/deletar/' +${livro.id}}"> deletar </a>
+ </td>
+</tr>
+</tbody>
+</table>
+<a th:href="@{/cadastro}"> Cadastrar Livros</a>
+</body>
+
+
+</html>

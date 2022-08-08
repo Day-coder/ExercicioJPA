@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+<h1> Cadastro </h1>
+<form th:action="@{/cadastro}" method="post">
+<label for="idtitulo"> Título </label>
+<input id="idtitulo" type="text" placeholder= "Informe o título do livro" name= "titulo"> 
+<label for="idautor"> Autor </label>
+<input id="idautor" type="text" placeholder= "Informe o nome do autor" name= "autor"> 
+<label for="idanopubli"> Ano de Publicação </label>
+<input id="idanopubli" type="number" placeholder= "Informe o ano de publicação" name= "anoPublicacao"> 
+<label for="ideditora"> Editora </label>
+<input id="ideditora" type="text" placeholder= "Informe o nome da editora" name= "editora"> 
+<label for="idvolume"> Volume </label>
+<input id="idavolume" type="number" placeholder= "Informe o volume" name= "volume"> 
+
+<button> Salvar</button>
+</form>
+
+</body>
+
+
+</html>

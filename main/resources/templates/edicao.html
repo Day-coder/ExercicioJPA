@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xlmns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<h1> Editar </h1>
+<form th:action="@{/cadastro}" method="post" th:object= "${livro}">
+<label> Id</label>
+<input type="text" th:field= "*{id}" readonly/>
+<label for="idtitulo"> Título </label>
+<input id="idtitulo" type="text" placeholder= "Informe o título do livro" th:field= "*{titulo}"> 
+<label for="idautor"> Autor </label>
+<input id="idautor" type="text" placeholder= "Informe o nome do autor" th:field= "*{autor}"> 
+<label for="idanopubli"> Ano de Publicação </label>
+<input id="idanopubli" type="number" placeholder= "Informe o ano de publicação" th:field= "*{anoPublicacao}"> 
+<label for="ideditora"> Editora </label>
+<input id="ideditora" type="text" placeholder= "Informe o nome da editora" th:field= "*{editora}"> 
+<label for="idvolume"> Volume </label>
+<input id="idvolume" type="number" placeholder= "Informe o volume" th:field= "*{volume}"> 
+
+<button> Salvar</button>
+</form>
+
+</body>
+
+
+</html>
